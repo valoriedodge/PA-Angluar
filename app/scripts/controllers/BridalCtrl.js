@@ -1,9 +1,12 @@
 (function() {
     function BridalCtrl() {
-        this.title = "Bridal Make-Up"
+        this.name = "bridal";
+        this.title = "Bridal Make-Up";
+        this.mainPhoto ="/assets/images/Cover.png";
+        this.photoShoots = Photos.bridals;
     }
 
     angular
         .module('peacockArtistry')
-        .controller('BridalCtrl', BridalCtrl);
+        .controller('BridalCtrl', ["Photos", BridalCtrl]);
 })();

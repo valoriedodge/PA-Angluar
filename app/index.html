@@ -6,21 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
     <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/styles/landing.css">
 </head>
 <body>
     <nav class="navbar">
         <a ui-sref="landing" class="logo">
-            <img src="assets/images/Logo.png" alt="peacock artistry logo">
+            <img src="/assets/images/Logo.png" alt="peacock artistry logo">
         </a>
         <div class="links-container">
-            <a ui-sref="bridal" class="navbar-link">bridal makeup</a>
-            <a ui-sref="costume" class="navbar-link">costume makeup</a>
-            <a ui-sref="classes" class="navbar-link">makeup classes</a>
-            <a ui-sref="contact" class="navbar-link">contact</a>
+<!--    Add porfolio dropdown later-->
+<!--
+                <div class="dropdown">
+                    <a class="dropbtn">Portfolio 
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                       <a ui-sref="bridal" class="navbar-link">bridal makeup</a>
+                        <a ui-sref="costume" class="navbar-link">costume makeup</a>
+                    </div>
+                </div>
+-->
+
+                <a ui-sref="bridal" class="navbar-link">portfolio</a>
+                <a ui-sref="classes" class="navbar-link">makeup classes</a>
+                <a ui-sref="costume" class="navbar-link">about</a>
+                <a ui-sref="contact" class="navbar-link">contact</a>
         </div>    
     </nav>
     <ui-view></ui-view>
+    <footer>
+        <div class="social">
+            <div>follow me 
+            <a href="https://twitter.com/peac0ckartistry" target="_blank"><i class="ion-social-twitter"></i></a>
+            <a href="https://www.instagram.com/peacock.artistry/" target="_blank"><i class="ion-social-instagram"></i></a>
+            <a href="https://www.facebook.com/peacock.artistry01/" target="_blank"><i class="ion-social-facebook"></i></a>
+            </div>
+            <p>copyright 2017 makenzie peacock
+            </p>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
@@ -28,5 +54,8 @@
     <script src="/scripts/services/Photos.js"></script>
     <script src="/scripts/controllers/LandingCtrl.js"></script>
     <script src="/scripts/controllers/BridalCtrl.js"></script>
+    <script src="/scripts/controllers/GlamourCtrl.js"></script>
+    <script src="/scripts/controllers/CostumeCtrl.js"></script>
+    <script src="/scripts/controllers/DancesCtrl.js"></script>
 </body>
 </html>
